@@ -1,12 +1,12 @@
-// modules 
+
+// Modules
 const { Model, DataTypes } = require('sequelize');
 
-
-// create our animal model
-class Animal extends Model {}
+// create our root model
+class Root extends Model {}
 
 // defines a table in the database with the following columns and configurations
-Animal.init(
+Root.init(
   {
     // defines id column as primary key and auto increments
     id: {
@@ -19,22 +19,13 @@ Animal.init(
       // auto increments the id by 1
       autoIncrement: true,
     },
-    //  defines the label column
-    label: {
+    //  defines the name of the root column
+    root: {
       // defines the type of data in the column
       type: DataTypes.STRING,
       // does not allow value to be empty
       allowNull: false,
     },
-    //  references the root column in the roots table
-    rootId: {
-      // defines the type of data in the column
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'root',
-        key: 'id',
-      }
-    }
   },
   {
     sequelize,
@@ -42,9 +33,9 @@ Animal.init(
     timestamps: true,
     //  will set data to be stored in the database as snake_case
     underscored: true,
-    // will set the table name to be animals
-    modelName: 'animals',
+    // will set the table name to be roots
+    modelName: 'root',
   }
-);
+)
 
-module.exports = Animal;
+module.exports = Root;
