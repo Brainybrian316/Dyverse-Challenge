@@ -1,7 +1,7 @@
 
 // Modules to require
 const express = require('express');
-const routes = require('./routes');
+// const routes = require('./routes');
 const sequelize = require('./config/connection');
 const path = require('path');
 const session = require('express-session');
@@ -32,7 +32,7 @@ app.use(express.json());
 //  use to parse urlencoded data
 app.use(express.urlencoded({ extended: true }));
 //  set up routes and controllers
-app.use(routes);
+// app.use(routes);
 
 // turn on connection to the database
 sequelize.sync({ force: false }).then(() => {
