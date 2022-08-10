@@ -18,6 +18,24 @@ Animal.init(
       primaryKey: true,
       // auto increments the id by 1
       autoIncrement: true,
-    }
+    },
+    //  defines the label column
+    label: {
+      // defines the type of data in the column
+      type: DataTypes.STRING,
+      // does not allow value to be empty
+      allowNull: false,
+    },
+  },
+  {
+    sequelize,
+    // will create timestamps for the createdAt and updatedAt columns
+    timestamps: true,
+    //  will set data to be stored in the database as snake_case
+    underscored: true,
+    // will set the table name to be animals
+    modelName: 'animals',
   }
-)
+);
+
+module.exports = Animal;
