@@ -1,6 +1,6 @@
 // modules
 const router = require('express').Router();
-const { Root, Animals } = require('../Model');
+const { Root, Animals, Children, StepChildren } = require('../Model');
 
 router.get('/tree', (req, res) => {
   Root.findAll({
@@ -10,8 +10,14 @@ router.get('/tree', (req, res) => {
       attributes: ['label'],
       include: [
         {
-          model: Animals,
-          as: 'children',
+          model: Children,
+          attributes: ['children'],
+          include: [
+            {
+              model: StepChildren,
+              attributes: ['stepName'],
+            }
+          ]
         }
       ]
     },
