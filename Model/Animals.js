@@ -2,8 +2,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-
-
 // create our animal model
 class Animal extends Model {}
 
