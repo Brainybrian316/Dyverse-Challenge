@@ -22,29 +22,12 @@ Animal.init(
       autoIncrement: true,
     },
     //  defines the label column
-    label: {
+    label: { 
       // defines the type of data in the column
       type: DataTypes.STRING,
       // does not allow value to be empty
       allowNull: false,
     },
-    // //  references the root column in the roots table
-    // rootId: {
-    //   // defines the type of data in the column
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'root',
-    //     key: 'id',
-    //   }
-    // },
-  //   animal_id: {
-  //     // defines the type of data in the column
-  //     type: DataTypes.INTEGER,
-  //     references: {
-  //       model: 'animals',
-  //       key: 'id',
-  //   }
-  // }
   },
   {
     sequelize,

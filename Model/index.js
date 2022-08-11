@@ -8,7 +8,9 @@ Animals.belongsTo(Root); // by not passing in a second argument, sequelize will 
 
 Root.hasMany(Animals);
 
-Animals.belongsTo(Animals, { as: 'children' });
+Animals.belongsTo(Animals, { through: 'Animals' });
+
+
 
 // exports the models
 module.exports = { Animals, Root };

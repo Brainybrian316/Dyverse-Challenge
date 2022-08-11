@@ -5,6 +5,7 @@ const animalsData = [
   {
     label: 'ant',
     rootId: 1,
+
   },
   {
     label: 'bear',

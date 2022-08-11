@@ -7,6 +7,7 @@ router.get('/tree', (req, res) => {
     include: [
       {
       model: Animals,
+      attributes: ['label'],
       include: [
         {
           model: Animals,
