@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
-class Children extends Model {}
+class StepChildren extends Model {}
 
-Children.init(
+StepChildren.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,7 +12,7 @@ Children.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    children: {
+    stepName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -21,8 +21,8 @@ Children.init(
     sequelize,
     timestamps: false,
     underscored: true,
-    modelName: 'children',
+    modelName: 'step_children',
   }
 );
 
-module.exports = Children;
+module.exports = StepChildren;
