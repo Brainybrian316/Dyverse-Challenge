@@ -10,6 +10,14 @@ Animals.belongsTo(Root); // by not passing in a second argument, sequelize will 
 
 Root.hasMany(Animals);
 
+Children.belongsTo(Animals);
+
+Animals.hasMany(Children);
+
+StepChildren.belongsTo(Children);
+
+Children.hasMany(StepChildren);
+
 
 
 

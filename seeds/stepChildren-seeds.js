@@ -4,6 +4,7 @@ const { StepChildren } = require('../Model');
 const stepChildrenData = [
   {
     stepName: 'elephant',
+    childrenId: 2,
   },
 ]
 

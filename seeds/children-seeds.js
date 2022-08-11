@@ -4,9 +4,11 @@ const { Children } = require('../Model');
 const childrenData = [
   {
     children: 'cat',
+    animalId: 2,
   },
   {
     children: 'dog',
+    animalId: 2,
   },
 ]
 
