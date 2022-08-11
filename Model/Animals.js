@@ -29,7 +29,7 @@ Animal.init(
       allowNull: false,
     },
     //  references the root column in the roots table
-    rootId: {
+    root_id: {
       // defines the type of data in the column
       type: DataTypes.INTEGER,
       references: {
