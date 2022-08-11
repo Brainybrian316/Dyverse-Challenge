@@ -12,6 +12,7 @@ const animalsData = [
   },
   {
     label: 'cat',
+    parentId: 2,
   },
   {
     label: 'dog',

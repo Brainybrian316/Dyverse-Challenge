@@ -4,11 +4,17 @@ const { Root, Animals } = require('../Model');
 
 router.get('/tree', (req, res) => {
   Root.findAll({
-    include: [{
+    include: [
+      {
       model: Animals,
-      attributes: ['label'],
-    }
-  ]
+      include: [
+        {
+          model: Animals,
+          as: 'children',
+        }
+      ]
+    },
+  ],
   })
     .then(dbRootData => res.json(dbRootData))
     .catch(err => {
