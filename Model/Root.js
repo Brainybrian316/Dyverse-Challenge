@@ -32,7 +32,7 @@ Root.init(
   {
     sequelize,
     // will create timestamps for the createdAt and updatedAt columns
-    timestamps: true,
+    timestamps: false,
     //  will set data to be stored in the database as snake_case
     underscored: true,
     // will set the table name to be roots

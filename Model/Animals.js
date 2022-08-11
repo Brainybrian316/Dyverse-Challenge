@@ -37,19 +37,19 @@ Animal.init(
     //     key: 'id',
     //   }
     // },
-    animal_id: {
-      // defines the type of data in the column
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'animals',
-        key: 'id',
-    }
-  }
+  //   animal_id: {
+  //     // defines the type of data in the column
+  //     type: DataTypes.INTEGER,
+  //     references: {
+  //       model: 'animals',
+  //       key: 'id',
+  //   }
+  // }
   },
   {
     sequelize,
     // will create timestamps for the createdAt and updatedAt columns
-    timestamps: true,
+    timestamps: false,
     //  will set data to be stored in the database as snake_case
     underscored: true,
     // will set the table name to be animals
