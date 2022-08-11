@@ -4,9 +4,11 @@ const { Animals } = require('../Model');
 const animalsData = [
   {
     label: 'ant',
+    rootId: 1,
   },
   {
     label: 'bear',
+    rootId: 1,
   },
   {
     label: 'cat',
@@ -19,6 +21,7 @@ const animalsData = [
   },
   {
     label: 'frog',
+    rootId: 1,
   },
 ]
 

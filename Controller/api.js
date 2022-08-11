@@ -6,6 +6,7 @@ router.get('/tree', (req, res) => {
   Root.findAll({
     include: [{
       model: Animals,
+      attributes: ['label'],
     }
   ]
   })
@@ -15,5 +16,18 @@ router.get('/tree', (req, res) => {
       res.status(500).json(err);
     });
 });
+
+// check to make sure animal data is displaying correctly
+router.get('/animals', (req, res) => {
+  Animals.findAll()
+    .then(dbAnimalData => res.json(dbAnimalData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  );
+}
+);
+
 
 module.exports = router;
