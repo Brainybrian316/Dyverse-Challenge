@@ -1,6 +1,8 @@
 
 // Modules
 const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+
 
 // create our root model
 class Root extends Model {}
