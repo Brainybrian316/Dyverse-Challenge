@@ -9,7 +9,11 @@ Animals.belongsTo(Root); // by not passing in a second argument, sequelize will 
 
 Root.hasMany(Animals);
 
-Animals.belongsTo(Animals, { through: 'Animals' });
+Animals.belongsToMany(Animals, {
+  through: Children,
+  as: 'children',
+  foreignKey: 'Animal_id',
+})
 
 
 
