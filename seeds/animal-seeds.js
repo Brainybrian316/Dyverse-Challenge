@@ -3,22 +3,22 @@ const { Animals } = require('../Model');
 
 const animalsData = [
   {
-    name: 'ant',
+    label: 'ant',
   },
   {
-    name: 'bear',
+    label: 'bear',
   },
   {
-    name: 'cat',
+    label: 'cat',
   },
   {
-    name: 'dog',
+    label: 'dog',
   },
   {
-    name: 'elephant',
+    label: 'elephant',
   },
   {
-    name: 'frog',
+    label: 'frog',
   },
 ]
 

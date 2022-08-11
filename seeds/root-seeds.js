@@ -3,7 +3,7 @@ const { Root } = require('../Model');
 
 const rootData = [
   {
-    name: 'root',
+    root: 'root',
   }
 ]
 
