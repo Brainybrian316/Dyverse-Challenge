@@ -12,15 +12,6 @@ const animalsData = [
     rootId: 1,
   },
   {
-    label: 'cat',
-  },
-  {
-    label: 'dog',
-  },
-  {
-    label: 'elephant',
-  },
-  {
     label: 'frog',
     rootId: 1,
   },
