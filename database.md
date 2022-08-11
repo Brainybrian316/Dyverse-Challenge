@@ -3,7 +3,7 @@
 # Data Schema Design
 
 if you look in the model folder you will see the schema for the data. This is the data that will be stored in the database.
-I have created 4 tables to store the data. The tables are: Root, Animals, Children, and StepChildren.
+I have created 4 tables to store the data. The tables are: Root, Animals, Children, and StepChildren( in data terms its grandchildren).
 
 The Root table has the following columns:
 a unique id(primary key)
