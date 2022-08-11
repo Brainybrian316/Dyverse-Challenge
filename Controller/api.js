@@ -1,11 +1,11 @@
 // modules
 const router = require('express').Router();
-const { Root } = require('../Model');
+const { Root, Animals } = require('../Model');
 
 router.get('/tree', (req, res) => {
   Root.findAll({
     include: [{
-      model: Animal,
+      model: Animals,
     }
   ]
   })
