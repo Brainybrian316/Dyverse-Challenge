@@ -14,6 +14,8 @@ const seedAll = async () => {
   await seedAnimals();
   console.log('\n----- Animals Seeded -----\n');
 
+  
+
   process.exit(0);
 }
 
