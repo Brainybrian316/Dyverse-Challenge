@@ -44,7 +44,14 @@ You can download <a href="https://insomnia.rest/download">Insomnia</a> to manipu
 
 # How to run the tests, if there are any
 
-Not applicable to this project.
+first go into mineSweeper folder using:
+```bash
+cd MineSweeper
+```
+Then, run:
+```bash
+npm run test
+```
 
 # Design choices
 
