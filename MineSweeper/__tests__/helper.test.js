@@ -86,7 +86,7 @@ test('boundary', () => {
   ];
   // expect an error
   expect(() => mineSweeper(input)).toThrow(Error);
-})
+});
 
 test('boundary2', () => {
   const input = [
@@ -94,7 +94,7 @@ test('boundary2', () => {
   ];
   // expect an error
   expect(() => mineSweeper(input)).toThrow(Error);
-})
+});
 
 test('boundary3', () => {
   const input = [
