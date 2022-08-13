@@ -28,7 +28,7 @@ function mineSweeper(input) {
       throw new Error('Invalid board');
     }
     if(!/^(\|)[ \*]+(\|)$/gm.test(input[row])) {
-      throw new Error('line 30');
+      throw new Error('invalid Character or pattern');
     }
     let rowString = ''; // create a string for each row
     for(let col = 1; col < input[row].length -1; col++) { // iterate through each column
