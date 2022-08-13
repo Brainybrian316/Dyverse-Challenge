@@ -1,5 +1,9 @@
 
 function mineSweeper(input) {
+  let boundary = input[0]; // +------+
+  input = input.slice(1); // remove the first line of input
+  
+
   // helper function to do bounds checking 
   function getCellValue(row, col) {
     if (row < 0 || col < 0) return 0; // if out of bounds, return 0
@@ -11,7 +15,7 @@ function mineSweeper(input) {
     }
   
     //  iterate through every element of the 2d array
-  for(let row = 0; row < input.length; row++) { // for each row
+  for(let row = 0; row < input.length - 1; row++) { // for each row
     let rowString = ''; // create a string for each row
     for(let col = 0; col < input[row].length; col++) { // iterate through each column
       if (getCellValue(row, col) === 1) {
@@ -40,6 +44,10 @@ function mineSweeper(input) {
 for(let row = 0; row < input.length; row++) {
   input[row] = input[row].replaceAll('0', ' '); 
 }
+input.unshift(boundary); // add the boundary to the top of the array
+console.log(input);
+
+
 
 return input;
 }
