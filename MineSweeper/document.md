@@ -17,3 +17,7 @@ The first if statement will place a mine if our number is equal to 1 with the he
 otherwise we create a variable called mines and set it to 0. 
 When we call mines we use our helper function to add or take away values from the mines depending on if the cell is a mine or not or if its near a mine.
 
+we reassign the value of input[row] to rowString.
+then we loop throw the rows and columns again  to check if any strings are equal to 0. If they are equal to 0 we will replace them with a space. 
+
+Finally, we return the input array.
