@@ -96,3 +96,11 @@ test('mineSweeper', () => {
 //   '1*1  ']
 //   expect(mineSweeper(input9)).toEqual(output9);
 // });
+
+
+// test('boundary', () => {
+//   const input = [
+//     '+-+', '| |', '|*  |', '|  |', '+-+'
+//   ];
+//   expect(mineSweeper(input)).toEqual(input);
+// })

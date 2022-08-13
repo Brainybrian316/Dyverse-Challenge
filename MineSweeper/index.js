@@ -1,9 +1,13 @@
 
 function mineSweeper(input) {
   let boundary = input[0]; // +------+
+  if(boundary.length !== input[1].length) {
+    throw new Error('Invalid board');
+  };
+  let rowLength = input[1].length;
+
   input = input.slice(1); // remove the first line of input
   
-
   // helper function to do bounds checking 
   function getCellValue(row, col) {
     if (row < 0 || col < 0) return 0; // if out of bounds, return 0
@@ -16,6 +20,9 @@ function mineSweeper(input) {
   
     //  iterate through every element of the 2d array
   for(let row = 0; row < input.length - 1; row++) { // for each row
+    if(input[row].length !== rowLength) {
+      throw new Error('Invalid board');
+    }
     let rowString = ''; // create a string for each row
     for(let col = 1; col < input[row].length -1; col++) { // iterate through each column
       if (getCellValue(row, col) === 1) {
