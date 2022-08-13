@@ -37,15 +37,10 @@ function mineSweeper(input) {
 
 //  turn any 0s into spaces
 for(let row = 0; row < input.length; row++) {
-  for(let col = 0; col < input[row].length; col++) {
-    if (input[row][col] === '0') {
-      input[row] = input[row].replaceAll(col, ' ');
-    }
-  }
+  input[row] = input[row].replaceAll('0', ' ');
 }
 
 return input;
 }
-
 
 module.exports = mineSweeper;
