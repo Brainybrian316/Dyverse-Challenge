@@ -2,8 +2,11 @@
 function mineSweeper(input) {
   let boundary = input[0]; // +------+
   if(boundary.length !== input[1].length) {
-    throw new Error('Invalid board');
+    throw new Error('Invalid boundary length');
   };
+  if(!/^(\+)(\-+)(\+)$/gm.test(boundary) || !/^(\+)(\-+)(\+)$/gm.test(input[input.length - 1])) {
+    throw new Error('Invalid boundary pattern');
+  }
   let rowLength = input[1].length;
 
   input = input.slice(1); // remove the first line of input
