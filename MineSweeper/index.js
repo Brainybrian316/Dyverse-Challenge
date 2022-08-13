@@ -17,7 +17,7 @@ function mineSweeper(input) {
     //  iterate through every element of the 2d array
   for(let row = 0; row < input.length - 1; row++) { // for each row
     let rowString = ''; // create a string for each row
-    for(let col = 0; col < input[row].length; col++) { // iterate through each column
+    for(let col = 1; col < input[row].length -1; col++) { // iterate through each column
       if (getCellValue(row, col) === 1) {
         rowString += '*'; // if mine, add * to string
       } else {
@@ -37,7 +37,7 @@ function mineSweeper(input) {
         rowString += mines;
     }
   }
-  input[row] = rowString; // reassign input[row] to be the the value of rowString
+  input[row] = `|${rowString}|`// reassign input[row] to be the the value of rowString
 }
 
 //  turn any hanging 0s into empty spaces
