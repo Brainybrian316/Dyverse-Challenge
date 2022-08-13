@@ -18,10 +18,11 @@ function mineSweeper(input) {
         rowString += '*'; // if mine, add * to string
       } else {
          let mines = 0;
-      
-         mines += getCellValue(row - 1, col + 1); // top-left
+        
+        //  += adds to the value of the variable
+         mines += getCellValue(row - 1, col + 1); // top-right
          mines += getCellValue(row - 1, col) // top 
-         mines += getCellValue(row - 1, col - 1); // top-right
+         mines += getCellValue(row - 1, col - 1); // top-left
 
          mines += getCellValue(row, col - 1); // left
          mines += getCellValue(row, col + 1); // right
@@ -32,12 +33,12 @@ function mineSweeper(input) {
         rowString += mines;
     }
   }
-  input[row] = rowString; // replace row with string
+  input[row] = rowString; // reassign input[row] to be the the value of rowString
 }
 
-//  turn any 0s into spaces
+//  turn any hanging 0s into empty spaces
 for(let row = 0; row < input.length; row++) {
-  input[row] = input[row].replaceAll('0', ' ');
+  input[row] = input[row].replaceAll('0', ' '); 
 }
 
 return input;
