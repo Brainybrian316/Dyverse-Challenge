@@ -80,9 +80,26 @@ const output9 = ['+-----+', '|  111|', '|  1*1|', '|  111|', '|111  |',
 });
 
 
-// test('boundary', () => {
-//   const input = [
-//     '+-+', '| |', '|*  |', '|  |', '+-+'
-//   ];
-//   expect(mineSweeper(input)).toEqual(input);
-// })
+test('boundary', () => {
+  const input = [
+    '+-+', '| |', '|*  |', '|  |', '+-+'
+  ];
+  // expect an error
+  expect(() => mineSweeper(input)).toThrow(Error);
+})
+
+test('boundary2', () => {
+  const input = [
+    ['+-----+', '*   * |', '+-- --+']
+  ];
+  // expect an error
+  expect(() => mineSweeper(input)).toThrow(Error);
+})
+
+test('boundary3', () => {
+  const input = [
+    ['+-----+', '|X  * |', '+-----+']
+  ]
+  // expect an error
+  expect(() => mineSweeper(input)).toThrow(Error);
+});
