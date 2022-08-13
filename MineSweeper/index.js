@@ -1,5 +1,6 @@
 
 function mineSweeper(input) {
+
   let boundary = input[0]; // +------+
   if(boundary.length !== input[1].length) {
     throw new Error('Invalid boundary length');
@@ -25,6 +26,9 @@ function mineSweeper(input) {
   for(let row = 0; row < input.length - 1; row++) { // for each row
     if(input[row].length !== rowLength) {
       throw new Error('Invalid board');
+    }
+    if(!/^(\|)[ \*]+(\|)$/gm.test(input[row])) {
+      throw new Error('line 30');
     }
     let rowString = ''; // create a string for each row
     for(let col = 1; col < input[row].length -1; col++) { // iterate through each column
