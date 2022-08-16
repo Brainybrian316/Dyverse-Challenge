@@ -14,16 +14,6 @@ function mineSweeper(input) {
 
   input = input.slice(1); // remove the first line of input
   
-  // helper function to do bounds checking 
-  function getCellValue(row, col) {
-    if (row < 0 || col < 0) return 0; // if out of bounds, return 0
-    if (row >= input.length) return 0; // if out of bounds, return 0
-    if (col >= input[row].length) return 0; // if out of bounds, return 0
-
-    if (input[row][col] === '*') return 1; // if mine, return 1
-    return 0; // if not mine, return 0
-    };
-  
     //  iterate through every element of the array
   for(let row = 0; row < input.length - 1; row++) { // for each row
     // checking if all rows are the same length ex: row 1 is 5 long and row 2 is 5 long.
@@ -57,6 +47,15 @@ function mineSweeper(input) {
   }
   input[row] = `|${rowString}|`// reassign input[row] to be the the value of rowString
 }
+// helper function to do bounds checking 
+function getCellValue(row, col) {
+  if (row < 0 || col < 0) return 0; // if out of bounds, return 0
+  if (row >= input.length) return 0; // if out of bounds, return 0
+  if (col >= input[row].length) return 0; // if out of bounds, return 0
+
+  if (input[row][col] === '*') return 1; // if mine, return 1
+  return 0; // if not mine, return 0
+  };
 
 //  turn any hanging 0s into empty spaces
 for(let row = 0; row < input.length; row++) {
