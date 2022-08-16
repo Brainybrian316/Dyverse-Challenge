@@ -74,7 +74,6 @@ one query to get all the roots:
 <!-- get all data -->
 ```sql
 SELECT `root`.`id`, `root`.`root`, `animals`.`id` AS `animals.id`, `animals`.`label` AS `animals.label`, `animals->children`.`id` AS `animals.children.id`, `animals->children`.`children` AS `animals.children.children`, `animals->children->step_children`.`id` AS `animals.children.step_children.id`, `animals->children->step_children`.`step_name` AS `animals.children.step_children.stepName` FROM `roots` AS `root` LEFT OUTER JOIN `animals` AS `animals` ON `root`.`id` = `animals`.`root_id` LEFT OUTER JOIN `children` AS `animals->children` ON `animals`.`id` = `animals->children`.`animal_id` LEFT OUTER JOIN `step_children` AS `animals->children->step_children` ON `animals->children`.`id` = `animals->children->step_children`.`child_id` ORDER BY `root`.`id` DESC;
-UPDATE `Sessions` SET `expires`=?,`updatedAt`=? WHERE `sid` = ?;
 ```
 or sequelize query:
 
