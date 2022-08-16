@@ -24,7 +24,7 @@ function mineSweeper(input) {
     return 0; // if not mine, return 0
     };
   
-    //  iterate through every element of the 2d array
+    //  iterate through every element of the array
   for(let row = 0; row < input.length - 1; row++) { // for each row
     // checking if all rows are the same length ex: row 1 is 5 long and row 2 is 5 long.
     if(input[row].length !== rowLength) {
